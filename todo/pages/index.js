@@ -1,22 +1,22 @@
+import { AppBar, Toolbar } from "@mui/material";
 import Head from "next/head";
-import Link from "next/link";
+import ToolbarContent from "../components/TollbarContent";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>메인 | 투두</title>
-        <meta name="description" content="할일관리서비스 투두 입니다." />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>메인 페이지</h1>
+      <AppBar position="fixed">
+        <Toolbar>
+          <ToolbarContent></ToolbarContent>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
 
-      <nav>
-        <Link href="/">메인</Link>
-
-        <Link href="/about">어바웃</Link>
-      </nav>
+      <h1 className="mt-3">메인 페이지</h1>
     </>
   );
 }

@@ -10,7 +10,8 @@
   font-style: normal;
 }
 
-html > body html > body select,
+html > body,
+html > body select,
 html > body button,
 html > body input,
 html > body textarea {

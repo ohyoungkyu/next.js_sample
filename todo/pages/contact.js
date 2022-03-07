@@ -1,26 +1,26 @@
+import { AppBar, Toolbar, Button } from "@mui/material";
 import Head from "next/head";
-import Link from "next/link";
+import ToolbarContent from "../components/TollbarContent";
 
-export default function About() {
+export default function Contact() {
   return (
     <>
       <Head>
-        <title>앱소개 | 투두</title>
-        <meta name="description" content="할일관리서비스 투두 입니다." />
-        <link rel="icon" href="/favicon.ico" />
+        <title>연락처 | 투두</title>
       </Head>
 
-      <h1>앱 소개 페이지</h1>
+      <AppBar position="fixed">
+        <Toolbar>
+          <ToolbarContent></ToolbarContent>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
 
-      <nav>
-        <Link href="/">
-          <a style={{ color: "" }}>메인</a>
-        </Link>
+      <h1 className="mt-3">연락처 페이지</h1>
 
-        <Link href="/about">
-          <a style={{ color: "pink" }}>어바웃</a>
-        </Link>
-      </nav>
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
     </>
   );
 }
