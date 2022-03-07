@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Link from "next/line";
+import Link from "next/link";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -10,21 +10,27 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <nav>
-          <Link href="/">
-            <a style={{ color: "" }}>메인</a>
-          </Link>
-
-          <Link href="/about">
-            <a style={{ color: "pink" }}>어바웃</a>
-          </Link>
-
-          <Link href="/contact">
-            <a style={{ color: "pink" }}>연락처</a>
-          </Link>
+      <header>
+        <nav className="bg-red-500">
+          <ul className="flex">
+            <li>
+              <Link href="/">
+                <a className="block p-4 hover:text-[#afafaf]">메인</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a className="block p-4 hover:text-[#afafaf]">어바웃</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <a className="block p-4 hover:text-[#afafaf]">연락처</a>
+              </Link>
+            </li>
+          </ul>
         </nav>
-      </div>
+      </header>
       <Component {...pageProps} />
     </>
   );
